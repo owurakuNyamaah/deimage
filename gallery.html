@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+    <title>gallery</title>
+    <meta name='UTF-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='stylesheet.css' type='text/css'>
+    </head>
+    <body>
+        <header>
+            <div class = 'header'>
+                <img src = 'images/logo.jpg' alt = 'logo'>
+                <h1>De-Image Print Colors</h1>
+                <a href = 'index.html' target = '_self'>Home <b>||</b></a>
+                <a href = 'gallery.html' target = '_self'>Gallery <b>||</b></a>
+                <a href = 'form.php' target = '_self'>Contact</a>
+            </div>
+        </header>
+            
+        <h1 style='color:red;margin:5px;'><em>PHOTOS of work done<br>______</em></h1>
+        <main>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-A' id = 'myImg'>
+                        <img src='images/E.jpg' alt='workdone'>
+                        <img src='images/L.jpg' alt='workdone'>
+                        <img src='images/3.jpg' alt='workdone'>
+                        <img src='images/4.jpg' alt='workdone'>
+                        <img src='images/5.jpg' alt='workdone'>
+                        <img src='images/6.jpg' alt='workdone'>
+                        <img src='images/7.jpg' alt='workdone'>
+                        <img src='images/8.jpg' alt='workdone'>
+                        <img src='images/9.jpg' alt='workdone'>
+                        <img src='images/10.jpg' alt='workdone'>
+                        <img src='images/11.jpg' alt='workdone'>
+                        <img src='images/12.jpg' alt='workdone'>
+                        <img src='images/13.jpg' alt='workdone'>
+                        <img src='images/15.jpg' alt='workdone'>
+                    </div>
+                    <div class='col-B' id='myImg'>
+                        <img src='images/14.jpg' alt='workdone'>
+                        <img src='images/18.jpg' alt='workdone'>
+                        <img src='images/C.jpg' alt='workdone'>
+                        <img src='images/20.jpg' alt='workdone'>
+                        <img src='images/32.jpg' alt='workdone'>
+                        <img src='images/23.jpg' alt='workdone'>
+                        <img src='images/24.jpg' alt='workdone'>
+                        <img src='images/25.jpg' alt='workdone'>
+                        <img src='images/26.jpg' alt='workdone'>
+                        <img src='images/27.jpg' alt='workdone'>
+                        <img src='images/28.jpg' alt='workdone'>
+                        <img src='images/29.jpg' alt='workdone'>
+                        <img src='images/30.jpg' alt='workdone'>
+                        <img src='images/31.jpg' alt='workdone'>
+                        <img src='images/M.jpg' alt='workdone'>
+                    </div>
+                    <div class = 'col-C' id = 'myImg'>
+                        <img src='images/A.jpg' alt='workdone'>
+                        <img src='images/B.jpg' alt='workdone'>
+                        <img src='images/22.jpg' alt='workdone'>
+                        <img src='images/D.jpg' alt='workdone'>
+                        <img src='images/1.jpg' alt='workdone'>
+                        <img src='images/F.jpg' alt='workdone'>
+                        <img src='images/G.jpg' alt='workdone'>
+                        <img src='images/H.jpg' alt='workdone'>
+                        <img src='images/I.jpg' alt='workdone'>
+                        <img src='images/J.jpg' alt='workdone'>
+                        <img src='images/K.jpg' alt='workdone'>
+                        <img src='images/2.jpg' alt='workdone'>
+                        <img src='images/16.jpg' alt='workdone'>
+                        <img src='images/19.jpg' alt='workdone'>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-5'>
+                        <img src='images/0.jpg' alt='logo'>
+                    </div>
+                    <div class='col-6'>
+                        <h1 style='color:white;margin-bottom:15px;'>Contact</h1>
+                        <p>Location: Osu Oxford Street</p>
+                        <p>Tel:   <b>0201588766 / 0249656700</b></n></p>
+                        <p>Email: <i>www.deimageprint@live.com</i></p>
+                        <p style='margin-bottom:0px;text-align:right;'>powered by <b>#TnC</b> &copy;2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!--The Modal-->
+        <div id='myModal' class='modal'>
+            <!--The close button-->
+            <span id='close'>&times;</span>
+            <!--Modal-content (the image)-->
+            <img class='modal-content' id='img01'>
+        </div>
+        <!--javascript of modal-->
+        <script>
+            let image = document.querySelectorAll('#myImg > img');
+            let modal = document.getElementById('myModal');
+            let modalContent = document.getElementById('img01');
+            let close = document.getElementById('close');
+
+
+            image.forEach(element => {
+                element.addEventListener('click', function() {
+                modal.style.display = 'block';
+                modalContent.src = this.src;
+                })
+            })
+
+            close.addEventListener('click', function() {
+                modal.style.display = 'none'
+            })
+        </script>
+    </body>
+</html>

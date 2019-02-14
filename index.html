@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>deimageprint</title>
+        <meta name='UTF-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' href='stylesheet.css' type='text/css'>
+    </head>
+    <body>
+        <header>
+            <div class = 'header'>
+                <img src = 'images/logo.jpg' alt = 'logo'>
+                <h1>De-Image Print Colors</h1>
+                <a href = 'index.html' target = '_self'>Home <b>||</b></a>
+                <a href = 'gallery.html' target = '_self'>Gallery <b>||</b></a>
+                <a href = 'form.php' target = '_self'>Contact</a>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div>
+                    <h1 style='color:black;font-size: 200%;margin:15px'><b>Sign & Branding</b></p>
+                    <h2 style='color:red;margin:5px;'><em>Showcase.<br>____</em></h2>
+                    </div>
+            </section>
+            <section>
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col-3' id = 'myImg'>
+                            <img src='images/28.jpg' alt='pic1' style='width:100%'>
+                            <img src='images/5.jpg' alt='pic2' style='width:100%'>
+                            <img src='images/3.jpg' alt='pic3' style='width:100%'>
+                            <img src='images/J.jpg' alt='pic4' style='width:100%'>
+                            <img src='images/G.jpg' alt='pic5' style='width:100%'>
+                        </div>
+                        <div class='col-4' id = 'myImg'>
+                            <img src='images/I.jpg' alt='pic6'>
+                            <img src='images/23.jpg' alt='pic7'>
+                            <img src='images/6.jpg' alt='pic8'>
+                            <img src='images/D.jpg' alt='pic9'>
+                            <img src='images/F.jpg' alt='pic10'>
+                        </div>
+                    </div>
+                </div>
+                <a class='see' href='gallery.html'>See more>>></a>
+            </section>
+            <section>
+                <h1 style='color:red;margin:5px'><em>Services.<br>____</em></h1>
+                <p>
+                    We help our clients engage their customers through sign, tags and brand elements and
+                    implementation by ensuring that our clients' brand values are represented
+                    from design to installation. We also install, maintain and repair brand elements
+                    using the latest materials and technology.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-5'>
+                        <img src='images/0.jpg' alt='logo'>
+                    </div>
+                    <div class='col-6'>
+                        <h1 style='color:white;margin-bottom:15px'>Contact</h1>
+                        <p>Location: Osu Oxford Street</p>
+                        <p>Tel:   <b>0201588766 / 0249656700</b></p>
+                        <p>Email: <i>www.deimageprint@live.com</i></p>
+                        <p style='margin-bottom:0px;text-align:right;'>powered by <b>#TnC</b> &copy;2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div id = 'myModal' class = 'modal'>
+            <span id= 'close'>&times;</span>
+            <img id = 'img01' class = 'modal-content'></img>
+        </div>
+
+        <script>
+            let images = document.querySelectorAll('#myImg> img');
+            let modal = document.getElementById('myModal')
+            let close = document.getElementById('close');
+            let modalContent = document.getElementById('img01');
+
+            images.forEach(function(element) { 
+                element.addEventListener('click', function() {
+                modal.style.display = 'block';
+                modalContent.src = this.src;
+                })
+            })
+            close.addEventListener('click', function() {
+                modal.style.display = 'none';
+            })
+        </script>
+    </body>
+</html>
