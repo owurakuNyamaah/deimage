@@ -1,1 +1,1 @@
-A website for advertising de-image print color
+A website to showcase an interior design company's (de-imageprint) works
